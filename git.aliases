@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+
 # Git shortcuts
 alias ga='git add '
 alias gb='git branch'

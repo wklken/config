@@ -22,7 +22,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,6 +44,50 @@ export HISTTIMEFORMAT='%F %T ' #格式 日期+命令
 # export HISTCONTROL=erasedups
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTIGNORE="ls:ll:pwd:clear;gs"
+
+# Plugins
+source ~/.zplug/init.zsh
+# manage zplug itself like other packages
+# zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions"
+# zplug "zdharma/fast-syntax-highlighting"
+zplug "zsh-users/zsh-completions"
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+# zplug "plugins/gitfast",   from:oh-my-zsh
+zplug "plugins/git-extras",   from:oh-my-zsh
+zplug "plugins/autojump",    from:oh-my-zsh
+zplug "plugins/git",    from:oh-my-zsh
+# zplug "plugins/npm",   from:oh-my-zsh
+# # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectx
+# zplug "plugins/kubectl",   from:oh-my-zsh
+# zplug "plugins/helm",   from:oh-my-zsh
+# zplug "plugins/docker",   from:oh-my-zsh
+# zplug "superbrothers/zsh-kubectl-prompt", use:kubectl.zsh
+# https://github.com/wfxr/forgit
+# zplug 'wfxr/forgit'
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load --verbose
+# zplug load
+
+#=============== plug settings begin =============
+# D: zsh-autosuggestions
+# http://askubuntu.com/questions/558280/changing-colour-of-text-and-background-of-terminal
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=237'
+
+#=============== plug settings end =============
 
 # User configuration
 #
