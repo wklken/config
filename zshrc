@@ -30,6 +30,7 @@ export LANG='en_US.UTF-8'
 export EDITOR='vim'
 export PAGER=cat
 
+
 # User configuration
 #
 # tool: bat https://github.com/sharkdp/bat
@@ -41,6 +42,7 @@ alias cat='bat -p'
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,vendor} --type f --ignore-file ~/.config/ignore"
 # export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(bat --style=numbers --color=always --line-range :500 {} || cat {}) 2> /dev/null | head -500'"
+# export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 # Use ~~ as the trigger sequence instead of the default **
 export FZF_COMPLETION_TRIGGER='**'
 
@@ -51,14 +53,19 @@ eval "$(direnv hook zsh)"
 # develop env: gvm https://github.com/moovweb/gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
-# develop env: pyenv https://github.com/pyenv/pyenv 
+# develop env: pyenv https://github.com/pyenv/pyenv
 # pyenv update
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH" # TODO: not ok with macos
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# develop env: nvm  https://github.com/nvm-sh/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # alias
-# source ~/.zsh_aliases
-# source ~/.git_aliases
+source ~/.zsh.aliases
+source ~/.git.aliases
+
