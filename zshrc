@@ -61,6 +61,10 @@ zplug "zsh-users/zsh-completions"
 zplug "plugins/git-extras",   from:oh-my-zsh
 zplug "plugins/autojump",    from:oh-my-zsh
 zplug "plugins/git",    from:oh-my-zsh
+# zplug "plugins/zsh-256color",   from:oh-my-zsh
+# zplug "plugins/extract",   from:oh-my-zsh
+# zplug "plugins/redis-cli",   from:oh-my-zsh
+# zplug "plugins/encode64",   from:oh-my-zsh
 # zplug "plugins/npm",   from:oh-my-zsh
 # # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectx
 # zplug "plugins/kubectl",   from:oh-my-zsh
@@ -69,6 +73,11 @@ zplug "plugins/git",    from:oh-my-zsh
 # zplug "superbrothers/zsh-kubectl-prompt", use:kubectl.zsh
 # https://github.com/wfxr/forgit
 # zplug 'wfxr/forgit'
+# zplug "plugins/ruby",   from:oh-my-zsh
+# zplug "plugins/gem",   from:oh-my-zsh
+# zplug "plugins/npm",   from:oh-my-zsh
+# zplug "plugins/node",   from:oh-my-zsh
+# zplug "plugins/golang",   from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -85,7 +94,14 @@ zplug load --verbose
 #=============== plug settings begin =============
 # D: zsh-autosuggestions
 # http://askubuntu.com/questions/558280/changing-colour-of-text-and-background-of-terminal
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=237'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=243'
+#
+# D: zsh-history-substring-search
+# add zsh-history-substring-search to plugins
+# git cl + ctrl'P
+# bind P and N for EMACS mode
+# bindkey -M emacs '^P' history-substring-search-up
+# bindkey -M emacs '^N' history-substring-search-down
 
 #=============== plug settings end =============
 
