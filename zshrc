@@ -12,6 +12,10 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Uncomment the following line to change how often to auto-update (in days).
 zstyle ':omz:update' frequency 7
 
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -30,11 +34,27 @@ export LANG='en_US.UTF-8'
 export EDITOR='vim'
 export PAGER=cat
 
+# History
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups #忽略重复
+export HISTFILE="$HOME/.history" #记录的文件
+export HISTTIMEFORMAT='%F %T ' #格式 日期+命令
+# export HISTCONTROL=erasedups
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export HISTIGNORE="ls:ll:pwd:clear;gs"
 
 # User configuration
 #
 # tool: bat https://github.com/sharkdp/bat
 alias cat='bat -p'
+
+# tool: ag https://github.com/ggreer/the_silver_searcher
+alias ag='ag --path-to-ignore ~/.ignore'
+
+# tool: tree
+alias tree='tree -I "__pycache__"'
 
 # tool: fzf https://github.com/junegunn/fzf
 # ctrl+r /     vim **<tab> /kill -9 <tab> /    uset/export/unalias <tab>
@@ -52,6 +72,7 @@ eval "$(direnv hook zsh)"
 
 # develop env: gvm https://github.com/moovweb/gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# export PPROF_TMPDIR=$HOME/workspace/tmp/
 
 # develop env: pyenv https://github.com/pyenv/pyenv
 # pyenv update
@@ -59,6 +80,7 @@ export PATH="$HOME/.pyenv/bin:$PATH" # TODO: not ok with macos
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # develop env: nvm  https://github.com/nvm-sh/nvm
 export NVM_DIR="$HOME/.nvm"

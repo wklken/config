@@ -7,8 +7,11 @@ vo(){
    vim -o$# $*
 }
 
+# alias ls='ls --ignore="*.pyc" --ignore="__pycache__"'
 alias ll='ls -al'
 alias llt='ls -alrt'
+
+
 
 # TODO
 # alias diff='colordiff'
