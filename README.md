@@ -1,6 +1,7 @@
 # README.md
 
-- install curl/wget/vim
+- install curl/wget/vim/git(newest)
+          mysql/redis
 
 - install [oh-my-zsh](https://ohmyz.sh/)
     - my theme [af-magic-left](https://github.com/wklken/af-magic-left)
@@ -22,7 +23,7 @@
 - install [autojump](https://github.com/wting/autojump#installation)
 
 - install [direnv](https://direnv.net/)
-- install [pyenv](https://github.com/pyenv/pyenv)
+- install [pyenv](https://github.com/pyenv/pyenv) / [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
 - install [gvm](https://github.com/moovweb/gvm)
 - install [nvm](https://github.com/nvm-sh/nvm)
 
