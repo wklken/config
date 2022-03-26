@@ -134,7 +134,17 @@ eval "$(direnv hook zsh)"
 alias help='tldr'
 
 # tool: scc https://github.com/boyter/scc
-alias loc='scc --exclude vendor'
+alias loc='scc --exclude-dir vendor'
+
+# tool: fd https://github.com/sharkdp/fd
+# Setting fd as the default source for fzf
+# export FZF_DEFAULT_COMMAND='fd --type f'
+# If you want the command to follow symbolic links and don't want it to exclude hidden files
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
 
 # tool: kube-prompt https://github.com/c-bata/kube-prompt
 alias kp='kube-prompt'

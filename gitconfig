@@ -1,0 +1,38 @@
+[user]
+	name = YOUR_NAME
+	email = YOUR_NAME@gmail.com
+
+[core]
+    pager = delta
+
+[diff]
+    colorMoved = default
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true
+    line-numbers = true
+
+    plus-style = bold green "#00605f"
+
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
+    ; side-by-side = true
+
+    ; commit-decoration-style = blue ol
+    ; commit-style = raw
+    ; whitespace-error-style = 22 reverse
+    ; syntax-theme = Monokai Extended
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
