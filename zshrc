@@ -100,8 +100,8 @@ zplug load --verbose
 # add zsh-history-substring-search to plugins
 # git cl + ctrl'P
 # bind P and N for EMACS mode
-# bindkey -M emacs '^P' history-substring-search-up
-# bindkey -M emacs '^N' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
 
 #=============== plug settings end =============
 
