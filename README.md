@@ -10,7 +10,12 @@
 - install [ag](https://github.com/ggreer/the_silver_searcher)
 - install tree `yum install tree -y`/`sudo apt-get install tree -y`/`brew install tree`
 - install [jq](https://stedolan.github.io/jq/)
+- install [tldr](https://github.com/tldr-pages/tldr)
+- install [scc](https://github.com/boyter/scc)
+
 
 - install [pyenv](https://github.com/pyenv/pyenv)
 - install [gvm](https://github.com/moovweb/gvm)
 - install [nvm](https://github.com/nvm-sh/nvm)
+
+- install [kube-prompt](https://github.com/c-bata/kube-prompt)

@@ -130,8 +130,20 @@ export FZF_COMPLETION_TRIGGER='**'
 # direnv
 eval "$(direnv hook zsh)"
 
+# tool: tldr https://github.com/tldr-pages/tldr
+alias help='tldr'
+
+# tool: scc https://github.com/boyter/scc
+alias loc='scc --exclude vendor'
+
+# tool: kube-prompt https://github.com/c-bata/kube-prompt
+alias kp='kube-prompt'
+
 # develop env: gvm https://github.com/moovweb/gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# go path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 # export PPROF_TMPDIR=$HOME/workspace/tmp/
 
 # develop env: pyenv https://github.com/pyenv/pyenv
