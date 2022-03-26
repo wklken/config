@@ -4,7 +4,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
+# ZSH_THEME="af-magic"
+# curl https://raw.githubusercontent.com/wklken/af-magic-left/master/af-magic-left.zsh-theme -o ~/.oh-my-zsh/themes/af-magic-left.zsh-theme
+ZSH_THEME="af-magic-left"
 
 # Uncomment one of the following lines to change the auto-update behavior
 zstyle ':omz:update' mode auto      # update automatically without asking

@@ -1,7 +1,12 @@
 # README.md
 
+- install curl/wget/vim
+
 - install [oh-my-zsh](https://ohmyz.sh/)
+    - my theme [af-magic-left](https://github.com/wklken/af-magic-left)
+      - `curl https://raw.githubusercontent.com/wklken/af-magic-left/master/af-magic-left.zsh-theme -o ~/.oh-my-zsh/themes/af-magic-left.zsh-theme`
 - install [zplug](https://github.com/zplug/zplug)
+
 
 - install [fzf](https://github.com/junegunn/fzf) (brew or git)
 - install [bat ](https://github.com/sharkdp/bat)                    replace cat
@@ -22,3 +27,7 @@
 - install [nvm](https://github.com/nvm-sh/nvm)
 
 - install [kube-prompt](https://github.com/c-bata/kube-prompt)
+
+- install [mycli](https://github.com/dbcli/mycli)
+
+- install [graphviz](https://graphviz.org/)
