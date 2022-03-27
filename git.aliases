@@ -15,6 +15,12 @@ alias gfu='git fetch upstream'
 alias gclean='git fetch --prune'
 alias gitsynctag='git fetch --prune --tags'
 
+# forgit
+# alias gaa='git forgit add'
+# alias gdd='git forgit diff'
+# alias gll='git forgit log'
+# alias gi='git forgit ignore'
+
 # TODO: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 
 # Git shortcuts

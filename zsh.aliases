@@ -11,7 +11,12 @@ vo(){
 alias ll='ls -al'
 alias llt='ls -alrt'
 
+# alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1'  #递归删除目录下所有pyc
+# alias ag='ag --path-to-ignore ~/.ignore'
 
+# alias cp='cp -v'
+# alias mv='mv -v'
+# alias cpr='cp -r'
 
 # TODO
 # alias diff='colordiff'
@@ -47,9 +52,6 @@ alias llt='ls -alrt'
 # alias c="clear"   #清屏
 # alias cls="clear"   #清屏
 
-# alias cp='cp -v'
-# alias cpr='cp -r'
-# alias mv='mv -v'
 
 # alias df="df -h"
 # alias du="du -h"
@@ -70,7 +72,6 @@ alias llt='ls -alrt'
 # alias chux='chmod u+x'    #该权限
 
 # # tool
-# alias rmpyc='find . -name "*.pyc" -exec rm -rf {} \; >> /dev/null 2>&1'  #递归删除目录下所有pyc
 # alias rmlog='rm *.log;rm *.log.*'
 # alias now='date +"%Y-%m-%d %T"'
 # # for svn
