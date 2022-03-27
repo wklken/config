@@ -48,7 +48,13 @@ export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTIGNORE="ls:ll:pwd:clear;gs"
 
 # Plugins
-source ~/.zplug/init.zsh
+# export ZPLUG_HOME=/opt/homebrew/opt/zplug
+# source $ZPLUG_HOME/init.zsh
+# linux
+[ -f  ~/.zplug/init.zsh ] && source ~/.zplug/init.zsh
+# macos
+[ -f  /opt/homebrew/opt/zplug/init.zsh ] && source /opt/homebrew/opt/zplug/init.zsh
+
 # manage zplug itself like other packages
 # zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
