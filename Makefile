@@ -10,6 +10,9 @@ sync:
 	git push origin master
 	sed -i "s#YOUR_NAME#${USERNAME}#g" gitconfig
 
+update:
+	git pull origin master
+
 backup:
 	echo "do backup"
 
