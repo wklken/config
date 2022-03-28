@@ -18,8 +18,12 @@ install:
 	ln -s ${CURRENT_DIR}/zshrc ~/.zshrc
 	ln -s ${CURRENT_DIR}/git.aliases ~/.git.aliases
 	ln -s ${CURRENT_DIR}/zsh.aliases ~/.zsh.aliases
+	# TODO: support macos
 	sed -i "s#YOUR_NAME#${USERNAME}#g" gitconfig
+
 	ln -s ${CURRENT_DIR}/gitconfig  ~/.gitconfig
+	# install the theme i like
+	curl https://raw.githubusercontent.com/wklken/af-magic-left/master/af-magic-left.zsh-theme -o ~/.oh-my-zsh/themes/af-magic-left.zsh-theme
 
 uninstall:
 	echo "do uninstall"

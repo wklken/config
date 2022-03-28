@@ -125,8 +125,8 @@ alias ag='ag --path-to-ignore ~/.ignore'
 alias tree='tree -I "__pycache__"'
 
 # tool: fzf https://github.com/junegunn/fzf
-# ctrl+r /     vim **<tab> /kill -9 <tab> /    uset/export/unalias <tab>
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# ctrl+r /     vim **<tab> /kill -9 <tab> /    uset/export/unalias <tab>
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,vendor} --type f --ignore-file ~/.config/ignore"
 # export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(bat --style=numbers --color=always --line-range :500 {} || cat {}) 2> /dev/null | head -500'"
@@ -180,4 +180,5 @@ export NVM_DIR="$HOME/.nvm"
 # alias
 source ~/.zsh.aliases
 source ~/.git.aliases
+
 
