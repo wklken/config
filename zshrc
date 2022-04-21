@@ -52,6 +52,7 @@ export HISTIGNORE="ls:ll:pwd:clear;gs"
 [ -f  ~/.zplug/init.zsh ] && source ~/.zplug/init.zsh
 # macos
 [ -f  /usr/local/opt/zplug/init.zsh ] && source /usr/local/opt/zplug/init.zsh
+[ -f  /opt/homebrew/opt/zplug/init.zsh ] && source /opt/homebrew/opt/zplug/init.zsh
 
 # manage zplug itself like other packages
 # zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -94,8 +95,8 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
-# zplug load
+# zplug load --verbose
+zplug load
 
 #=============== plug settings begin =============
 # D: zsh-autosuggestions
