@@ -22,6 +22,7 @@ install:
 	ln -s ${CURRENT_DIR}/git.aliases ~/.git.aliases
 	ln -s ${CURRENT_DIR}/zsh.aliases ~/.zsh.aliases
 	ln -s ${CURRENT_DIR}/pyproject.toml ~/.pyproject.toml
+	ln -s ${CURRENT_DIR}/ignore ~/.ignore
 	# TODO: support macos
 	sed -i "s#YOUR_NAME#${USERNAME}#g" gitconfig
 
