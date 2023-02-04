@@ -112,6 +112,9 @@ bindkey -M emacs '^N' history-substring-search-down
 
 #=============== plug settings end =============
 
+# for all brew install binaries
+export PATH="/opt/homebrew/bin/:$PATH"
+
 # User configuration
 #
 # tool: bat https://github.com/sharkdp/bat
@@ -152,7 +155,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
-
 # tool: kube-prompt https://github.com/c-bata/kube-prompt
 alias kp='kube-prompt'
 
@@ -180,4 +182,5 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.zsh.aliases
 source ~/.git.aliases
 
-
+# sed for mac
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
