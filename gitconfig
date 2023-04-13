@@ -38,3 +38,7 @@
 
 [init]
 	defaultBranch = master
+[credential]
+	helper = store
+[url "https://"]
+	insteadOf = git://

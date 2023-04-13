@@ -16,7 +16,9 @@ include_trailing_comma = 'true'
 force_grid_wrap = 0
 use_parentheses = 'true'
 line_length = 119
+# skip = "migrations"
 skip = [".mypy_cache", ".git", "*/migrations"]
+known_local_folder =["bkuser_core", "bkuser_shell", "bkuser_global", "bkuser_sdk", "bklogin", "backend", "apigateway"]
 
 [tool.flake8]
 ignore = "C901,E203,W503"
@@ -43,3 +45,40 @@ module = [
     "*.settings.*",
 ]
 ignore_errors = true
+
+[tool.ruff]
+# Enable Pyflakes `E` and `F` codes by default.
+select = ["E", "F", "W"]
+# ignore = ["E741", "F841"]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "*/migrations/*",
+]
+
+# Same as Black.
+line-length = 119
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 8

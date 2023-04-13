@@ -68,15 +68,26 @@ zplug "zsh-users/zsh-completions"
 zplug "plugins/git-extras",   from:oh-my-zsh
 zplug "plugins/autojump",    from:oh-my-zsh
 zplug "plugins/git",    from:oh-my-zsh
+
+# alias
+# encode64/e64 decode64/d64
+zplug "plugins/encode64", from:oh-my-zsh
+
+# auto completions
+# ok
+zplug "plugins/golang",  from:oh-my-zsh
+zplug "plugins/docker",   from:oh-my-zsh
+
+# not ok
+# zplug "plugins/poetry",    from:oh-my-zsh
+# zplug "plugins/fd",   from:oh-my-zsh
+# zplug "plugins/kubectl",   from:oh-my-zsh
+# zplug "plugins/helm",   from:oh-my-zsh
+
+# TODO
 # zplug "plugins/zsh-256color",   from:oh-my-zsh
 # zplug "plugins/extract",   from:oh-my-zsh
 # zplug "plugins/redis-cli",   from:oh-my-zsh
-# zplug "plugins/encode64",   from:oh-my-zsh
-# zplug "plugins/npm",   from:oh-my-zsh
-# # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectx
-# zplug "plugins/kubectl",   from:oh-my-zsh
-# zplug "plugins/helm",   from:oh-my-zsh
-# zplug "plugins/docker",   from:oh-my-zsh
 # zplug "superbrothers/zsh-kubectl-prompt", use:kubectl.zsh
 # https://github.com/wfxr/forgit
 # zplug 'wfxr/forgit'
@@ -84,7 +95,8 @@ zplug "plugins/git",    from:oh-my-zsh
 # zplug "plugins/gem",   from:oh-my-zsh
 # zplug "plugins/npm",   from:oh-my-zsh
 # zplug "plugins/node",   from:oh-my-zsh
-# zplug "plugins/golang",   from:oh-my-zsh
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectx
+#
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -155,6 +167,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
+
 # tool: kube-prompt https://github.com/c-bata/kube-prompt
 alias kp='kube-prompt'
 
@@ -177,6 +190,9 @@ eval "$(pyenv virtualenv-init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# kubelet krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # alias
 source ~/.zsh.aliases
