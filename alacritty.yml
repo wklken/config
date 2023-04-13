@@ -1,0 +1,114 @@
+# Colors (Aura Theme)
+colors:
+  # Default colors
+  primary:
+    background: '#15141b'
+    foreground: '#edecee'
+
+  cursor:
+    cursor: '#a277ff'
+
+  selection:
+    text: CellForeground
+    background: '#29263c'
+
+  # Normal colors
+  normal:
+    black: '#110f18'
+    red: '#ff6767'
+    green: '#61ffca'
+    yellow: '#ffca85'
+    blue: '#a277ff'
+    magenta: '#a277ff'
+    cyan: '#61ffca'
+    white: '#edecee'
+
+  # Bright colors
+  bright:
+    black: '#4d4d4d'
+    red: '#ff6767'
+    green: '#61ffca'
+    yellow: '#ffca85'
+    blue: '#a277ff'
+    magenta: '#a277ff'
+    cyan: '#61ffca'
+    white: '#edecee'
+
+  search:
+    matches:
+      foreground: '#000000'
+      background: '#ffffff'
+    focused_match:
+      foreground: '#ffffff'
+      background: '#9F7AF5'
+
+# 设置字体
+font:
+  normal:
+    family: 'Menlo'
+    style: Regular
+  bold:
+    family: 'Menlo'
+    style: Regular
+  italic:
+    family: 'Menlo'
+    style: Italic
+  bold_italic:
+    family: 'Menlo'
+    style: Italic
+
+  # 字大小
+  size: 16.0
+
+  offset:
+    x: 0
+    y: 9
+  glyph_offset:
+    x: 0
+    y: 3
+
+window:
+  padding:
+    x: 20
+    y: 22
+  decorations: transparent
+  dimensions:
+    columns: 106
+    lines: 25
+
+scrolling:
+  # 回滚缓冲区中的最大行数,指定“0”将禁用滚动。
+  history: 100000
+  # 滚动行数
+  multiplier: 4
+
+cursor:
+  style:
+    shape: Beam
+
+# 如果为‘true’，则使用亮色变体绘制粗体文本。
+draw_bold_text_with_bright_colors: false
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: true
+
+live_config_reload: true
+
+key_bindings:
+  - { key: R, mods: Command, mode: ~Vi|~Search, chars: "\x0c" }
+  - { key: R, mods: Command, mode: ~Vi|~Search, action: ClearHistory }
+  - { key: W, mods: Command, action: Hide }
+  - { key: W, mods: Command|Shift, action: Quit }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: T, mods: Command, action: CreateNewWindow }
+  - { key: Left, mods: Alt, chars: "\x1bb" } # Skip word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # Skip word right
+  - { key: Left, mods: Command, chars: "\x01" } # Home
+  - { key: Right, mods: Command, chars: "\x05" } # End
+  - { key: Back, mods: Command, chars: "\x15" } # Delete line
+  - { key: Back, mods: Alt, chars: "\x1b\x7f" } # Delete word
+  - { key: Comma,     mods: Command,      command:
+      {program: "sh", args: ["-c","open ~/.config/alacritty.yml"]}     }
+  - { key: Space,     mods: Alt,          chars: " "                     }
+  - { key: Back, mods: Super, chars: "\x15" } # delete word/line

@@ -36,3 +36,5 @@
 [delta "interactive"]
     keep-plus-minus-markers = false
 
+[init]
+	defaultBranch = master
