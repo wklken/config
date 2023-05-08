@@ -259,3 +259,5 @@ alias 'git?'='copilot_git-assist';
   };
 alias 'gh?'='copilot_gh-assist';
 alias 'wts'='copilot_what-the-shell';
+
+export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
