@@ -1,0 +1,21 @@
+hotKey:
+  shift-1:
+    shortCut:    Shift-1
+    description: Viewing pods
+    command:     pods
+  shift-2:
+    shortCut:    Shift-2
+    description: View deployments
+    command:     dp
+  shift-3:
+    shortCut:    Shift-3
+    description: View service
+    command:     svc
+  shift-4:
+    shortCut:    Shift-4
+    description: View configmap
+    command:     cm
+  shift-5:
+    shortCut:    Shift-5
+    description: View secrets
+    command:     secrets

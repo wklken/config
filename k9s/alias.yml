@@ -1,0 +1,15 @@
+alias:
+  # Use pp as an alias for Pod
+  pp: v1/pods
+
+  # Use crb as an alias for ClusterRoleBinding
+  crb: rbac.authorization.k8s.io/v1/clusterrolebindings
+
+  # Use cr as an alias for ClusterRole
+  cr: rbac.authorization.k8s.io/v1/clusterroles
+
+  # Use dep as an alias for Deployments
+  dep: apps/v1/deployments
+
+  # Use fred as an alias for CRD Frederick
+  fred: acme.io/v1alpha1/fredericks
