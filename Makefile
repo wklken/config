@@ -31,5 +31,6 @@ install:
 	curl https://raw.githubusercontent.com/wklken/af-magic-left/master/af-magic-left.zsh-theme -o ~/.oh-my-zsh/themes/af-magic-left.zsh-theme
 	# TODO: add ln k9s files
 
+
 uninstall:
 	echo "do uninstall"
