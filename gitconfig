@@ -50,3 +50,5 @@
 	required = true
 [commit]
 	gpgsign = true
+[log]
+	date = iso
