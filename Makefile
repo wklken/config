@@ -23,6 +23,7 @@ install:
 	ln -s ${CURRENT_DIR}/zsh.aliases ~/.zsh.aliases
 	ln -s ${CURRENT_DIR}/pyproject.toml ~/.pyproject.toml
 	ln -s ${CURRENT_DIR}/ignore ~/.ignore
+	ln -s ${CURRENT_DIR}/autocorrectrc ~/.autocorrectrc
 	# TODO: support macos
 	sed -i "s#YOUR_NAME#${USERNAME}#g" gitconfig
 

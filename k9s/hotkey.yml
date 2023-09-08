@@ -19,3 +19,7 @@ hotKey:
     shortCut:    Shift-5
     description: View secrets
     command:     secrets
+  shift-5:
+    shortCut:    Shift-6
+    description: View jobs
+    command:     jobs

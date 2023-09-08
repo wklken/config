@@ -1,6 +1,7 @@
 [user]
 	name = YOUR_NAME
 	email = YOUR_NAME@gmail.com
+	signingkey = C00ECE55
 
 [core]
     pager = delta
@@ -52,3 +53,5 @@
 	gpgsign = true
 [log]
 	date = iso
+[gpg]
+	program = /usr/bin/gpg

@@ -48,8 +48,9 @@ ignore_errors = true
 
 [tool.ruff]
 # Enable Pyflakes `E` and `F` codes by default.
-select = ["E", "F", "W"]
+select = ["E", "F", "W", "I", "C90"]
 # ignore = ["E741", "F841"]
+ignore = ["E741", "F841", "E501"]
 
 # Exclude a variety of commonly ignored directories.
 exclude = [
@@ -81,4 +82,9 @@ line-length = 119
 
 [tool.ruff.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
-max-complexity = 8
+max-complexity = 12
+
+[tool.ruff.isort]
+relative-imports-order = "closest-to-furthest"
+# known-local-folder = ["apigateway"]
+# known-third-party = ["django"]
