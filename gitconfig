@@ -10,7 +10,8 @@
     colorMoved = default
 
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr|%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format-local:'%m-%d %H:%M'
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
