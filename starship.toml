@@ -2,8 +2,7 @@
 # https://starship.rs/presets/tokyo-night.html
 format = """
 [░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[$hostname](fg:#769ff0 bg:#394260)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
@@ -17,6 +16,11 @@ $php\
 $time\
 [ ](fg:#1d2230)\
 \n$character"""
+
+[hostname]
+ssh_only = false
+format = '$ssh_symbol$hostname'
+disabled = false
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"

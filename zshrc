@@ -262,3 +262,6 @@ alias 'wts'='copilot_what-the-shell';
 
 export PATH="/opt/homebrew/opt/lua@5.3/bin:$PATH"
 export PATH=/root/PreCI:$PATH
+
+# starship
+eval "$(starship init zsh)"
