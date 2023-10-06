@@ -24,6 +24,7 @@ install:
 	ln -s ${CURRENT_DIR}/pyproject.toml ~/.pyproject.toml
 	ln -s ${CURRENT_DIR}/ignore ~/.ignore
 	ln -s ${CURRENT_DIR}/autocorrectrc ~/.autocorrectrc
+	ln -s ${CURRENT_DIR}/starship.toml ~/config/starship.toml
 	# TODO: support macos
 	sed -i "s#YOUR_NAME#${USERNAME}#g" gitconfig
 
