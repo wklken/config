@@ -12,6 +12,7 @@ $nodejs\
 $rust\
 $golang\
 $php\
+$lua\
 [](fg:#212736 bg:#1d2230)\
 $time\
 [ ](fg:#1d2230)\
@@ -25,7 +26,7 @@ disabled = false
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
-truncate_to_repo = false
+truncate_to_repo = true
 
 [directory.substitutions]
 "Documents" = "󰈙 "
