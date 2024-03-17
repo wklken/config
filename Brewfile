@@ -21,6 +21,7 @@ brew "unbound"
 brew "gnutls"
 brew "gnupg"
 brew "go"
+brew "helm"
 brew "jq"
 brew "k9s"
 brew "lrzsz"
@@ -45,3 +46,12 @@ brew "daipeihust/tap/im-select"
 cask "font-fira-code"
 cask "font-sf-mono-nerd-font-ligaturized"
 cask "kitty"
+mas "Amphetamine", id: 937984704
+mas "Bob", id: 1630034110
+mas "iHosts", id: 1102004240
+mas "PopClip", id: 445189367
+mas "The Unarchiver", id: 425424353
+mas "Twitter", id: 1482454543
+mas "Xnip", id: 1221250572
+mas "优酷", id: 1014945607
+mas "剪映专业版", id: 1529999940
